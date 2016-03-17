@@ -1,0 +1,7 @@
+INSERT INTO raw_metrics (device_id, metric_time, metric_name, metric_value) VALUES (?,?,?,?);
+
+INSERT INTO daily_rollups (device_id, metric_day, metric_name, metric_min, metric_max, metric_avg) VALUES (?,?,?,?,?,?);
+
+SELECT * from raw_metrics WHERE device_id = ? AND metric_time > ? AND metric_time < ?;
+
+SELECT * from daily_rollups WHERE device_id = ? AND metric_day > ? AND metric_day < ?;

@@ -1,0 +1,19 @@
+Pre-requisites:
+pip install cassandra-driver
+
+USAGE:
+
+To insert data into Cassandra, run:
+python energy.py <number of devices> <cassandra host ip>
+
+For example:
+python energy.py 3 127.0.0.1
+
+
+To generate a file containing a day's data for sensors:
+
+python filegen.py <number of devices>
+
+For example:
+
+python filegen.py 1000
