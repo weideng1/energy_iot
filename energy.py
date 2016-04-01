@@ -64,7 +64,6 @@ class SimpleClient(object):
                 PRIMARY KEY (device_id, metric_time)
             ) WITH CLUSTERING ORDER BY (metric_time DESC)
                 AND bloom_filter_fp_chance = 0.01
-                AND caching = '{"keys":"ALL", "rows_per_partition":"NONE"}'
                 AND comment = ''
                 AND compaction = {'class': 'org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy'}
                 AND compression = {'sstable_compression': 'org.apache.cassandra.io.compress.LZ4Compressor'}
@@ -89,7 +88,6 @@ class SimpleClient(object):
                 PRIMARY KEY (device_id, metric_day)
             ) WITH CLUSTERING ORDER BY (metric_day DESC)
                 AND bloom_filter_fp_chance = 0.01
-                AND caching = '{"keys":"ALL", "rows_per_partition":"NONE"}'
                 AND comment = ''
                 AND compaction = {'class': 'org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy'}
                 AND compression = {'sstable_compression': 'org.apache.cassandra.io.compress.LZ4Compressor'}
